@@ -42,10 +42,10 @@ define(function(require) {
                 (componentMap[moduleName]).push($element);
             });
 
-            return [
-                behaviorMap,
-                componentMap
-            ];
+            return {
+                behaviorMap: behaviorMap,
+                componentMap: componentMap
+            };
         }
     };
 });
