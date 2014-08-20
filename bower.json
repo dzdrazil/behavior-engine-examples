@@ -10,6 +10,7 @@
   "dependencies": {
     "requirejs": "latest",
     "jquery": "latest",
-    "EventBus": "~1.0.2"
+    "EventBus": "~1.0.2",
+    "lodash": "~2.4.1"
   }
 }

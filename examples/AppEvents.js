@@ -1,0 +1,3 @@
+define({
+    READY: 'app:ready'
+});
