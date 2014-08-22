@@ -1,2 +1,2 @@
-behavior-engine-seed
+behavior-engine-examples
 ====================
