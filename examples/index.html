@@ -57,13 +57,29 @@
             <form action="">
                 <h3>Components</h3>
                 <fieldset>
-                    <legend>MVC style</legend>
-                    <div></div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>MVVM style</legend>
-                    <div></div>
+                    <legend>Using a local event bus</legend>
+                    <div data-component="Gallery/Component">
+                        <ul data-gallery-list style="float:left">
+                           <li><a href>Cajun Ipsum</a></li>
+                           <li><a href>Bacon Ipsum</a></li>
+                           <li><a href>D &amp; D Ipsum</a></li>
+                           <li><a href>Cheese Ipsum</a></li>
+                        </ul>
+                        <div data-gallery-item>
+                            <div data-item>
+                                Alligator alligator cher Mardi Gras boucherie catahoula. Cayenne viens ci file boucherie Boudreaux fried catfish couillon envie levee. Bbq King Cake remoulade merci beaucoup catahoula catahoula. Ca c'est bon food food praline jambalaya King Cake couillon bread pudding iced tea. Tasso lagniappe couillon po-boy smoked sausage macque choux.
+                            </div>
+                            <div data-item>
+                                Bacon ipsum dolor sit amet corned beef landjaeger salami jowl short loin short ribs tail spare ribs. Jerky tri-tip flank prosciutto, capicola hamburger tongue sirloin t-bone drumstick venison. Ball tip short ribs corned beef pancetta tongue. Beef ribs meatball capicola, kielbasa landjaeger fatback flank rump shankle short ribs leberkas shoulder prosciutto. Frankfurter tongue andouille rump ribeye cow salami chicken. Tongue shoulder tenderloin cow turkey meatloaf beef porchetta jowl pastrami flank short loin. Flank sirloin pig filet mignon chicken meatloaf corned beef.
+                            </div>
+                            <div data-item>
+                                Astral plane base land speed charm class feature damage dexterity dispel check dragon type energy drain fear aura full-round action grappling initiative check initiative count knowledge domain magical beast type masterwork natural armor bonus one-handed weapon plant type positive energy plane splash weapon touch attack trade domain. Animal domain armor bonus base save bonus battle grid burrow cross-class skill darkness darkness domain difficult terrain divine spell ethereal plane evil subtype experience points fate domain half speed hit level masterwork melee touch attack natural ability off hand resistance bonus resistance to energy scrying subschool small spell-like ability transitive plane tremorsense.
+                            </div>
+                            <div data-item>
+                                Everyone loves camembert de normandie jarlsberg. Cheese slices halloumi cheese and wine bavarian bergkase cheesy grin cheeseburger stilton who moved my cheese. Mozzarella pepper jack rubber cheese taleggio feta cheeseburger bocconcini cheese triangles. Macaroni cheese bocconcini melted cheese.
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>
@@ -86,6 +102,9 @@
                 config: {
                     'loaders/BehaviorLoader': {
                         uri: 'app/behaviors/'
+                    },
+                    'loaders/Loader': {
+                        uri: 'app/components/'
                     }
                 }
               });
