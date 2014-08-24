@@ -11,13 +11,30 @@
             If that isn't sufficient, CSS will do the trick.
             </p>
             <form action="">
+                <h3>Example Behaviors</h3>
+
+                <fieldset>
+                    <legend>Reveal Behavior</legend>
+                    <p>This behavior should be used on an input, preferably a radio type.</p>
+                    <input type="radio" name="characterClass" value="classWizard" id="characterClass_wizard" data-behavior="Reveal">
+                    <label for="characterClass_wizard">Wizard</label><br>
+                    <input type="radio" name="characterClass" value="classWarrior" id="characterClass_warrior" data-behavior="Reveal">
+                    <label for="characterClass_warrior">Warrior</label><br>
+                    <input type="radio" name="characterClass" value="classRogue" id="showOrHide_rogue" data-behavior="Reveal">
+                    <label for="showOrHide_rogue">Rogue</label><br>
+
+                    <div style="display:none;" data-reveal-target="classWizard">Hairy, but frail</div>
+                    <div style="display:none;" data-reveal-target="classWarrior">Hairy, but dense</div>
+                    <div style="display:none;" data-reveal-target="classRogue">Cunning, but not hairy</div>
+                </fieldset>
+
                 <fieldset>
                     <legend>Reveal-If Behavior</legend>
                     <p>
                     This behavior should be used on an input, preferably a select type.  It also should have the data-reveal-if attribute to specify which value the targets should toggle on. <br>  Note that the data-reveal-if-target and data-reveal-if-not attributes on the target elements must match the name of the input; this enables the behavior to be reused multiple times on the same page.
                     </p>
                     <label for="irrelevant">Are you a software engineer?</label>
-                    <select id="irrelevant" name="revealTest" data-behavior="RevealIfBehavior" data-reveal-if="yes">
+                    <select id="irrelevant" name="revealTest" data-behavior="RevealIf" data-reveal-if="yes">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
@@ -31,31 +48,45 @@
                     </div>
                 </fieldset>
 
+                <h3>Compositing behaviors</h3>
                 <fieldset>
-                    <legend>Reveal Behavior</legend>
-                    <p>This behavior should be used on an input, preferably a radio type.</p>
-                    <input type="radio" name="characterClass" value="classWizard" id="characterClass_wizard" data-behavior="RevealBehavior">
-                    <label for="characterClass_wizard">Wizard</label><br>
-                    <input type="radio" name="characterClass" value="classWarrior" id="characterClass_warrior" data-behavior="RevealBehavior">
-                    <label for="characterClass_warrior">Warrior</label><br>
-                    <input type="radio" name="characterClass" value="classRogue" id="showOrHide_rogue" data-behavior="RevealBehavior">
-                    <label for="showOrHide_rogue">Rogue</label><br>
+                    <legend>Behaviors x, y and z</legend>
+                </fieldset>
+            </form>
 
-                    <div style="display:none;" data-reveal-target="classWizard">Hairy, but frail</div>
-                    <div style="display:none;" data-reveal-target="classWarrior">Hairy, but dense</div>
-                    <div style="display:none;" data-reveal-target="classRogue">Cunning, but not hairy</div>
+            <form action="">
+                <h3>Components</h3>
+                <fieldset>
+                    <legend>MVC style</legend>
+                    <div></div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>MVVM style</legend>
+                    <div></div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Combining components and behaviors</legend>
+                    <div></div>
                 </fieldset>
             </form>
         </section>
 
-        <script type="text/javascript" data-main="main" src="../app/libs/requirejs/require.js"></script>
+        <script type="text/javascript" data-main="main" src="app/libs/requirejs/require.js"></script>
         <script type="text/javascript">
               require.config({
                 urlArgs: 'time=' +  (new Date()).getTime(),
                 paths: {
-                    jquery: '../app/libs/jquery/dist/jquery',
-                    lodash: '../app/libs/lodash/dist/lodash',
-                    EventBus: '../app/libs/EventBus/dist/EventBus'
+                    jquery: 'app/libs/jquery/dist/jquery',
+                    lodash: 'app/libs/lodash/dist/lodash',
+                    EventBus: 'app/libs/EventBus/dist/EventBus',
+                    bcengine: 'app/libs/bc-engine/dist/bcengine.min'
+                },
+                config: {
+                    'loaders/BehaviorLoader': {
+                        uri: 'app/behaviors/'
+                    }
                 }
               });
         </script>

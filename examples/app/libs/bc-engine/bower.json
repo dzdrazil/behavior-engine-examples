@@ -1,0 +1,31 @@
+{
+  "name": "bc-engine",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dzdrazil/bc-engine",
+  "authors": [
+    "dzdrazil@gmail.com"
+  ],
+  "description": "a declarative application engine",
+  "main": "dist/bcengine.min.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "declarative",
+    "framework"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "EventBus": "~1.0.2",
+    "lodash": "~2.4.1",
+    "jquery": "~2.1.1"
+  }
+}

@@ -1,12 +1,12 @@
 require(
     [
-        './App',
-        './AppEvents',
+        'bcengine',
+        './app/AppEvents',
         'jquery',
         'EventBus'
     ],
     function(
-        App,
+        bcengine,
         APP_EVENTS,
         $,
         EventBus
@@ -15,8 +15,11 @@ require(
 
         var eventBus = new EventBus();
         var $rootEl = $(document);
+        var BCEngine = bcengine.BCEngine;
 
-        $.when(App.init($rootEl, eventBus))
+        var appEngine = new BCEngine();
+
+        $.when(appEngine.init($rootEl, eventBus))
             .then(function() {
                 eventBus.trigger(APP_EVENTS.READY);
             });

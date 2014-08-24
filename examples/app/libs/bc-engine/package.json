@@ -1,0 +1,15 @@
+{
+  "name": "poner-js",
+  "private": true,
+  "version": "0.0.1",
+  "author": "https://github.com/dzdrazil/poner-js",
+  "homepage": "https://github.com/dzdrazil/poner-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzdrazil/poner-js"
+  },
+  "issues": "https://github.com/dzdrazil/poner-js/issues",
+  "devDependencies": {
+    "requirejs": "~2.1.14"
+  }
+}
