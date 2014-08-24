@@ -43,6 +43,5 @@
   },
   "_source": "git://github.com/adamRenny/EventBus.git",
   "_target": "~1.0.2",
-  "_originalSource": "EventBus",
-  "_direct": true
+  "_originalSource": "EventBus"
 }

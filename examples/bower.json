@@ -10,5 +10,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14",
+    "bc-engine": "~0.0.2"
+  }
 }
